@@ -9,11 +9,12 @@
 puts 'Starting seed'
 10.times do |i|
   puts "Seeding restaurant number #{i}"
-  Restaurant.create(
+  resto = Restaurant.create(
     name: Faker::Restaurant.name,
     address: Faker::Address.street_address,
     phone_number: Faker::PhoneNumber.phone_number,
     category: %w[japanese chinese italian french belgian].sample
   )
+  resto.save
 end
 puts 'Done seeding'

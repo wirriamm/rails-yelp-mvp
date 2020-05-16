@@ -10,7 +10,12 @@
   </head>
 
   <body>
-    <div class="container">
+    <nav class="navbar navbar-light bg-light p-3 sticky-top">
+      <%= link_to "Fake Yelp", restaurants_path, class: 'h1 m-0 text-success' %>
+      <button class="btn btn-success">Add Restaurant</button>
+    </nav>
+
+    <div class="container my-3">
       <%= yield %>
     </div>
   </body>

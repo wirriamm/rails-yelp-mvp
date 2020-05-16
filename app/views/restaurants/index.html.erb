@@ -1,0 +1,15 @@
+<div>
+  <h5 class="text-center">Which restaurants would you like to check out? 🍽</h5>
+</div>
+
+<% @restaurants.each do |restaurant| %>
+  <div class="card" style="width: 16rem;">
+    <img class="card-img-top" src="https://source.unsplash.com/random" style="height:12rem; width:16rem; object-fit:cover" alt="resto-img">
+    <div class="card-body">
+      <h5 class="card-title"><%= restaurant.name %></h5>
+      <p class="card-text"><i><%= restaurant.category.capitalize %></i></p>
+      <%= link_to 'Info', restaurant_path(restaurant), class: "btn btn-success" %>
+    </div>
+  </div>
+<% end %>
+
